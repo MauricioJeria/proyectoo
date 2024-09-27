@@ -8,6 +8,7 @@ import {AsigProfeComponent} from './asig-profe/asig-profe.component';
 import {AsigAlumnoComponent} from './asig-alumno/asig-alumno.component';
 import {AsistProfeComponent} from './asist-profe/asist-profe.component';
 import {AsistAlumnoComponent} from './asist-alumno/asist-alumno.component';
+import {RestablecerComponent} from './restablecer/restablecer.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'asig-profe', component: AsigProfeComponent},
   { path: 'asig-alumno', component: AsigAlumnoComponent},
   { path: 'asist-profe', component: AsistProfeComponent},
-  { path: 'asist-alumno', component: AsistAlumnoComponent}
+  { path: 'asist-alumno', component: AsistAlumnoComponent},
+  { path: 'restablecer', component: RestablecerComponent}
 ];
 
 @NgModule({
