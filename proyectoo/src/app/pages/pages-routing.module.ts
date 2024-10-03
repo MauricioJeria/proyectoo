@@ -13,7 +13,7 @@ import {RestablecerComponent} from './restablecer/restablecer.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent},
-  { path: '**' , component: NotFoundComponent},
+  { path: 'not-found' , component: NotFoundComponent},
   { path: 'login', component: LoginComponent},
   { path: 'logout', component: LogoutComponent},
   { path: 'asig-profe', component: AsigProfeComponent},
