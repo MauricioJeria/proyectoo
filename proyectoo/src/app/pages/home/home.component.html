@@ -1,5 +1,23 @@
 <ion-content>
   <app-header></app-header>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="guardarNombre()">Guardar Nombre</ion-button>
+  <br>
+  <ion-button (click)="eliminarNombre()">EliminarNombre</ion-button>
+  <br>
+  <ion-button (click)="consumirServicio()">
+    @if(cargando){
+      Cargandoo...
+    }
+    @else{
+      Consumir Servicio
+    }
+  </ion-button>
+  <br>
     <h1>
     Pagina Principal
   </h1>
