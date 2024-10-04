@@ -11,6 +11,8 @@ import { AsigAlumnoComponent} from './asig-alumno/asig-alumno.component';
 import { AsistProfeComponent} from './asist-profe/asist-profe.component';
 import { AsistAlumnoComponent} from './asist-alumno/asist-alumno.component';
 import { RestablecerComponent} from './restablecer/restablecer.component';
+import { DocenteComponent} from './docente/docente.component';
+import { EstudianteComponent} from './estudiante/estudiante.component';
 import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
@@ -28,7 +30,9 @@ import { FormsModule } from '@angular/forms';
     AsigAlumnoComponent,
     AsistProfeComponent,
     AsistAlumnoComponent,
-    RestablecerComponent
+    RestablecerComponent,
+    DocenteComponent,
+    EstudianteComponent
 
   ],
   imports: [

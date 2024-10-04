@@ -1,8 +1,27 @@
 <div class="pie">
-  <h1>Pie de app </h1>
+  <h1 [ngStyle]="{'color':getColor()}">Pie de app </h1>
   <p><a [routerLink]= "['/']">Home</a></p>
   <p><a [routerLink]= "['/not-found']">NotFound</a></p>
-  <p><a [routerLink]= "['/login']">Login</a></p>
+
+  @if (usuario){
+    <p><a [routerLink]="['/asig-profe']">Asignatura</a></p>
+    <p><a [routerLink]="['/asist-profe']">Asistencia</a></p>
+    <p><a [routerLink]= "['/logout']">Logout</a></p>
+    @if(usuarioCompleto.rol === 'docente'){
+      <p><a [routerLink]="['/docente']">Docente</a></p>
+    }
+    @else{
+      <p><a [routerLink]="['/estudiante']">Estudiante</a></p>
+      <p><a [routerLink]="['/asig-alumno']">Asignatura</a></p>
+      <p><a [routerLink]="['/asist-alumno']">Asistencia</a></p>
+      <p><a [routerLink]= "['/logout']">Logout</a></p>
+    }
+  }
+  @else{
+    <p><a [routerLink]= "['/login']">Login</a></p>
+
+  }
+
 
 
 </div>
