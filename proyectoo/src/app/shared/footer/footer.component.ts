@@ -19,11 +19,12 @@ export class FooterComponent  implements OnInit {
   ngOnInit() {
     this.authService.usuario$.subscribe(usuario => this.usuario = usuario);
     this.authService.usuarioCompleto$.subscribe(usuarioCompleto => {
-      console.log('Footer',this.usuarioCompleto);
+      this.usuarioCompleto = usuarioCompleto;
+      console.log('Footer', this.usuarioCompleto);
     });
   }
   getColor(){
-    if(this.usuario ==='admin'){
+    if(this.usuario ==='docente'){
       return 'blue';
     } else{
       return 'green';

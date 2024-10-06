@@ -1,11 +1,8 @@
 .cabecera{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  background-color: gray;
+
+  padding: 10px;
+  background-color: darkgrey;
 }
-.cabecera h1{
-  margin: 2rem;
-  color: white;
+.iniciado{
+  background-color: rgb(69, 127, 69);
 }
