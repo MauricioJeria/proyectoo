@@ -18,10 +18,10 @@
   <ion-button (click)="login(usuario, clave)">Iniciar sesion</ion-button>
   <ion-text color="danger" *ngIf="loginFailed">
     Usuario o clave incorrectos.
-
   </ion-text>
-
-
-
+  <ion-item lines="none">
+    <ion-label>¿No tienes una cuenta?</ion-label>
+    <ion-button fill="clear" [routerLink]="['/register']">Registrarse</ion-button>
+  </ion-item>
   <app-footer></app-footer>
   </ion-content>

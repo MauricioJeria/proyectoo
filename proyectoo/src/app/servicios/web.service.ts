@@ -8,7 +8,7 @@ export class WebService {
   httpClient = inject(HttpClient);
 
   constructor() { }
-  request(type: 'POST'| 'GET', url: string, path: string, body: any ={}){
+  request(type: 'POST'| 'GET' | 'PUT' | 'DELETE' , url: string, path: string, body: any ={}){
     return new Promise((resolve) => {
       const headers = new HttpHeaders({
         'Content-Type': 'application/json',
@@ -26,8 +26,18 @@ export class WebService {
           return;
         });
       }
-
-
-    });
+      if (type == 'PUT'){
+        this.httpClient.put(url + '/' + path, body, {headers}).subscribe(data => {
+          resolve(data);
+          return;
+      });
+  }
+      if(type == 'DELETE') {
+        this.httpClient.get(url + '/' + path, {headers}).subscribe(data => {
+          resolve(data);
+          return;
+        });
+      }
+});
   }
 }

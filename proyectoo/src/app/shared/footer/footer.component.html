@@ -11,15 +11,9 @@
     <p><a [routerLink]= "['/logout']">Logout</a></p>
     @if(usuarioCompleto.rol === 'docente'){
       <p><a [routerLink]="['/docente']">Docente</a></p>
-      <p><a [routerLink]="['/asig-profe']">Asignatura</a></p>
-    <p><a [routerLink]="['/asist-profe']">Asistencia</a></p>
     }
     @else{
       <p><a [routerLink]="['/estudiante']">Alumno</a></p>
-      <p><a [routerLink]="['/asig-alumno']">Asignatura A</a></p>
-    <p><a [routerLink]="['/asist-alumno']">Asistencia A</a></p>
-
-
     }
   }
   @else{

@@ -1,6 +1,5 @@
 import { inject, Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, of} from 'rxjs';
-import {usuariosSimulados} from '../models/data.models';
 import {WebService} from './web.service';
 import { UsuarioAPI} from '../models/UsuarioAPI.models';
 
@@ -42,6 +41,32 @@ export class AuthService {
       this.loginFailedSubject.next(true);
     }
   }
+  async registrarNuevoUsuario(usuario: any){
+    const url = 'https://66fec9ff2b9aac9c997d5dd0.mockapi.io/api/v1/';
+    try {
+      const usuariosExistentes = await this.obtenerUsuarios();
+      const usuarioExistente = usuariosExistentes.find(u => u.usuario === usuario.user);
+      if(usuarioExistente){
+        throw new Error('el usuario ya existe');
+    }
+      const res = await this.webservice.request('POST', url, 'usuarios', usuario);
+      console.log('usuario registrado con exito', res);
+      return res;
+    } catch(error) {
+      console.error ('Error al registrar usuario', error);
+      throw error;
+  }
+}
+    async obtenerUsuarios(): Promise<UsuarioAPI[]> {
+      const url = 'https://66fec9ff2b9aac9c997d5dd0.mockapi.io/api/v1/';
+      try {
+        const res = await this.webservice.request('GET', url, 'usuarios') as Array<UsuarioAPI>;
+        return res;
+      } catch (error) {
+        console.error(' error al obtener usuarios', error);
+        throw error;
+      }
+    }
   logout(): void {
     this.usuarioSubject.next('');
     this.usuarioCompletoSubject.next(null);
@@ -53,8 +78,5 @@ export class AuthService {
     return this.isAuthenticated$;
   }
 
+  }
 
-
-
-
-}

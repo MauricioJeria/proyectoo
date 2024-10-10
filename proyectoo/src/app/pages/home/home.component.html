@@ -1,25 +1,23 @@
 <ion-content>
   <app-header></app-header>
-  <ion-item>
-    <ion-label position="floating">Nombre</ion-label>
-    <ion-input [(ngModel)]="nombre"></ion-input>
-  </ion-item>
 
-  <ion-button (click)="guardarNombre()">Guardar Nombre</ion-button>
-  <br>
-  <ion-button (click)="eliminarNombre()">EliminarNombre</ion-button>
-  <br>
-  <ion-button (click)="consumirServicio()">
-    @if(cargando){
-      Cargandoo...
-    }
-    @else{
-      Consumir Servicio
-    }
-  </ion-button>
-  <br>
-    <h1>
-    Pagina Principal
-  </h1>
+  <div class="p-4">
+    <h1>Bienvenido a la APP</h1>
+
+    <h4>Botón para probar webservice</h4>
+    <ion-button (click)="consumirServicio()">
+      @if(cargando){
+        Cargando...
+      }
+      @else{
+        Consumir servicio
+      }
+    </ion-button>
+    <br>
+
+    <p>
+      Pagina Principal!
+    </p>
+  </div>
   <app-footer></app-footer>
 </ion-content>
