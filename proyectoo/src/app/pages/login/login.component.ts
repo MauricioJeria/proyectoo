@@ -19,11 +19,12 @@ export class LoginComponent  implements OnInit {
   loginFailed$ = this.loginFailedSubject.asObservable();
   loginFailed: boolean;
 
-  constructor() { }
-
   ngOnInit(): void {
     this.authService.loginFailed$.subscribe(loginFailed => this.loginFailed = loginFailed);
   }
+  constructor() { }
+
+  
   isLoading: boolean = false;
   async login(usuario: string, clave: string){
 
