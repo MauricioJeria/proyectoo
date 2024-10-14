@@ -22,12 +22,5 @@ export class HomeComponent  implements OnInit {
 
 
 
-  async consumirServicio(){
-    this.cargando = true;
-    const url = 'https://66fec9ff2b9aac9c997d5dd0.mockapi.io/api/v1/'
-    const res = await this.WebService.request('GET', url, 'usuarios');
-    console.log('respuesta de servicio', res);
-    this.cargando = false;
-  }
-
+  
 }

@@ -1,5 +1,23 @@
 <div class="cabecera" [ngClass]="{'iniciado': usuario!==''}">
-  <h1>APP DUOC</h1>
+  
+  <p><a [routerLink]= "['/']">Home</a></p>
+  <p><a [routerLink]= "['/register']">Registrar</a></p>
+
+
+  @if (usuario){
+
+    <p><a [routerLink]= "['/logout']">Logout</a></p>
+    @if(usuarioCompleto.rol === 'docente'){
+      <p><a [routerLink]="['/docente']">Docente</a></p>
+    }
+    @else{
+      <p><a [routerLink]="['/estudiante']">Alumno</a></p>
+    }
+  }
+  @else{
+    <p><a [routerLink]= "['/login']">Login</a></p>
+  }
+
   @if (usuario!==''){
     <p>
       Usuario: {{usuario}} - {{usuarioCompleto.rol}}
