@@ -61,7 +61,7 @@ export class RegisterComponent {
       this.successMessage = ' usuario registrado existosamente';
       await this.mostrarAlerta('Exito', this.successMessage);
     } catch (error){
-      this.errorMessage = 'hubo un error al registrar el usuario. intentalo nuevamente';
+      this.errorMessage = 'Error al registrar el usuario. intentalo nuevamente';
       this.registroFallido = true;
       await this.mostrarAlerta('Error', this.errorMessage);
     }
@@ -77,4 +77,6 @@ export class RegisterComponent {
 
 
   }
+  
+  
 }

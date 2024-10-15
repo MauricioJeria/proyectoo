@@ -41,7 +41,7 @@ export class LoginComponent  implements OnInit {
           this.usuario = '';
           this.clave ='';
 
-          if(usuarioCompleto.rol ===" docente"){
+          if(usuarioCompleto.rol ==="docente"){
             this.usuario = '';
             this.clave ='';
             this.router.navigate(['/docente']);
