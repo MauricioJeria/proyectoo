@@ -62,3 +62,13 @@
 ion-content {
   --background: white;
 }
+ion-header {
+  ion-toolbar {
+    --background: transparent;
+
+    ion-title {
+      color: var(--ion-color-primary);
+       font-weight: bold;
+    }
+  }
+}

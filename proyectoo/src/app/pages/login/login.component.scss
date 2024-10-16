@@ -77,3 +77,13 @@ ion-spinner {
   display: block;
   margin: 20px auto;
 }
+ion-header {
+  ion-toolbar {
+    --background: transparent;
+
+    ion-title {
+      color: var(--ion-color-primary);
+      font-weight: bold;
+    }
+  }
+}
