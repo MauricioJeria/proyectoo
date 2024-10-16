@@ -8,6 +8,8 @@ import {RestablecerComponent} from './restablecer/restablecer.component';
 import {DocenteComponent} from './docente/docente.component';
 import {EstudianteComponent} from './estudiante/estudiante.component';
 import { RegisterComponent } from './register/register.component';
+import { AsistenciaComponent } from './asistencia/asistencia.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +20,8 @@ const routes: Routes = [
   { path: 'restablecer', component: RestablecerComponent},
   { path: 'docente', component: DocenteComponent},
   { path: 'estudiante', component: EstudianteComponent},
-  { path: 'register', component: RegisterComponent}
+  { path: 'register', component: RegisterComponent},
+  { path: 'asistencia', component: AsistenciaComponent}
 ];
 
 @NgModule({

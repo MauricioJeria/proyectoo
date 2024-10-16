@@ -15,6 +15,7 @@ import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { AsistenciaComponent } from './asistencia/asistencia.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     RestablecerComponent,
     DocenteComponent,
     EstudianteComponent,
-    RegisterComponent
+    RegisterComponent,
+    AsistenciaComponent
 
   ],
   imports: [
