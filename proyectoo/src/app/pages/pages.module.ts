@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { AsistenciaComponent } from './asistencia/asistencia.component';
 
 
+
 @NgModule({
   declarations: [
     HomeComponent,

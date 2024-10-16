@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, OnDestroy } from '@angular/core';
 import { Subscription} from 'rxjs';
 import { AuthService} from 'src/app/servicios/auth.service';
+import { IonicModule } from '@ionic/angular';
 
 
 interface UsuarioAPI {
@@ -13,11 +14,14 @@ interface UsuarioAPI {
 }
 
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
+
+
 export class HeaderComponent  implements OnInit, OnDestroy {
   private authService = inject(AuthService);
   usuario: string;
@@ -46,5 +50,6 @@ export class HeaderComponent  implements OnInit, OnDestroy {
     this.subscriptionDatos?.unsubscribe();
     this.subscriptionAuthService?.unsubscribe();
   }
+
 
 }
