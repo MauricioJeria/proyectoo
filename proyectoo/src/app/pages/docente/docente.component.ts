@@ -1,14 +1,19 @@
 import { Component, ElementRef, OnInit, inject, ViewChild, OnDestroy } from '@angular/core';
 import QRious from 'qrious';
+import { AuthService } from 'src/app/servicios/auth.service';
+import { Subscription} from 'rxjs'
 
 @Component({
   selector: 'app-docente',
   templateUrl: './docente.component.html',
   styleUrls: ['./docente.component.scss'],
 })
-export class DocenteComponent  implements OnInit {
+export class DocenteComponent  implements OnInit, OnDestroy {
+  private authService = inject(AuthService);
+
 
   usuario: string;
+  subscriptionAuthService: Subscription;
   asignaturas = [
     {nombre: 'Lenguaje', id: '101'},
     {nombre: 'Matematicas', id: '102'},
@@ -23,7 +28,7 @@ export class DocenteComponent  implements OnInit {
 
 
 
-  @ViewChild('qrCanvas') qrCanvas!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('qrCanvas',{ static: false }) qrCanvas!: ElementRef<HTMLCanvasElement>;
 
 
 
@@ -56,7 +61,14 @@ export class DocenteComponent  implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.subscriptionAuthService = this. authService.usuario$.subscribe(usuario=> {
+      this.usuario = usuario
+      console.log('Docente:', usuario);
+    });
 
+  }
+  ngOnDestroy() {
+    this.subscriptionAuthService?.unsubscribe(); // Desuscribirse del observable del estado de autenticación
   }
 
 }
