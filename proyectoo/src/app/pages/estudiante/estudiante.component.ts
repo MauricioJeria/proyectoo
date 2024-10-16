@@ -23,9 +23,9 @@ export class EstudianteComponent  {
     const image = await Camera.getPhoto({
       quality: 90,
       allowEditing: true,
-      resultType: CameraResultType.Data_URL
+      resultType: CameraResultType.DataUrl
     });
-    const imageUrl = image.webpath;
+    const imageUrl = image.webPath;
     this.imageSrc = imageUrl;
   }
 

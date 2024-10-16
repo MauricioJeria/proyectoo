@@ -11,10 +11,10 @@
     <ion-item *ngFor="let asignatura of asignaturas">
       <div class="asignatura-container">
         <div class="asignatura-nombre">
-          {{ asignatura.nombre }} - {{ asignatura.codigo }}
+          {{ asignatura.nombre }} - {{ asignatura.id }}
         </div>
       </div>
-      <ion-button (click)="takePicture()" fill="outline" class="escanear-qr-button">Escanear QR</ion-button>
+      <ion-button (click)="takePicture()" fill="outline" class="escanear-qr-button">Scan Qr</ion-button>
     </ion-item>
   </ion-list>
 
