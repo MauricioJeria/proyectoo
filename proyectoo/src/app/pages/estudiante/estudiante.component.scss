@@ -1,0 +1,85 @@
+.student-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100%;
+  padding: 20px;
+}
+
+.student-box {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+
+  .custom-header {
+    background: transparent;
+
+    ion-toolbar {
+      --background: transparent;
+
+      ion-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: var(--ion-color-primary);
+        text-align: center;
+      }
+    }
+  }
+
+  ion-list {
+    background: transparent;
+    padding: 0;
+
+    ion-item {
+      --background: transparent;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      --border-color: transparent;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.asignatura-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.asignatura-nombre {
+  font-size: 16px;
+  color: var(--ion-color-primary);
+  flex-grow: 1;
+}
+
+.escanear-qr-button {
+  margin-left: 15px;
+  --border-radius: 8px;
+
+  &:hover {
+    --opacity: 0.8;
+  }
+}
+
+.custom-item {
+  --background: white;
+  --border-radius: 8px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    --background: #fafafa;
+  }
+}
+
+ion-content {
+  --background: white;
+}
