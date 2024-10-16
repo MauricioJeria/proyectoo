@@ -1,8 +1,79 @@
-.login {
+.login-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  text-align: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--ion-color-primary);
+    text-align: center;
+  }
+
+  ion-item {
+    --background: transparent;
+    --padding-start: 0;
+    --padding-end: 0;
+    --inner-padding-end: 0;
+    margin-bottom: 15px;
+
+    &.item-has-focus {
+      --highlight-background: var(--ion-color-primary);
+    }
+
+    ion-label {
+      color: var(--ion-color-medium);
+
+      &.label-floating.sc-ion-label-md-h,
+      &.label-floating.sc-ion-label-ios-h {
+        color: var(--ion-color-primary);
+      }
+    }
+
+    ion-input {
+      --color: var(--ion-color-primary);
+    }
+  }
+
+  ion-button {
+    margin-top: 20px;
+  }
+
+  ion-text {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+.register-link {
+  margin-top: 20px;
+  font-size: 14px;
+
+  ion-button {
+    margin: 0;
+    --padding-start: 4px;
+    --padding-end: 4px;
+  }
+}
+
+ion-content {
+  --background: white;
+}
+
+ion-spinner {
+  display: block;
+  margin: 20px auto;
 }

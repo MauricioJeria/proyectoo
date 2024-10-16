@@ -1,27 +1,38 @@
-<ion-content>
+<ion-content class="ion-padding">
   <app-header></app-header>
 
-  @if (isLoading){
-    <ion-spinner name="bubbles"></ion-spinner>
-  }
-  <h1>
-    Inicio de Sesion
-  </h1>
-  <ion-item>
-    <ion-label position="floating">Usuario</ion-label>
-    <ion-input [(ngModel)]="usuario"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Clave</ion-label>
-    <ion-input [(ngModel)]="clave"></ion-input>
-  </ion-item>
-  <ion-button (click)="login(usuario, clave)">Iniciar sesion</ion-button>
-  <ion-text color="danger" *ngIf="loginFailed">
-    Usuario o clave incorrectos.
-  </ion-text>
-  <ion-item lines="none">
-    <ion-label>¿No tienes una cuenta?</ion-label>
-    <ion-button fill="clear" [routerLink]="['/register']">Registrarse</ion-button>
-  </ion-item>
+  <div class="login-container">
+    <div class="login-box">
+      <h1>Inicio de Sesión</h1>
+
+      @if (isLoading) {
+        <ion-spinner name="bubbles"></ion-spinner>
+      }
+
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Clave</ion-label>
+        <ion-input [(ngModel)]="clave" type="password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="login(usuario, clave)" class="ion-margin-top">
+        Iniciar sesión
+      </ion-button>
+
+      <ion-text color="danger" *ngIf="loginFailed">
+        Usuario o clave incorrectos.
+      </ion-text>
+
+      <ion-item lines="none" class="register-link">
+        <ion-label>¿No tienes una cuenta?</ion-label>
+        <ion-button fill="clear" [routerLink]="['/register']">Registrarse</ion-button>
+      </ion-item>
+    </div>
+  </div>
+
   <app-footer></app-footer>
-  </ion-content>
+</ion-content>
