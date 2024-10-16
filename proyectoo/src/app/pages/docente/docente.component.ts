@@ -16,10 +16,16 @@ export class DocenteComponent  implements OnInit {
     {nombre: 'Artes Visuales', id: '104'}
   ];
 
+
   qrData: string = '';
   showQRcode: boolean = false;
-  
+
+
+
+
   @ViewChild('qrCanvas') qrCanvas!: ElementRef<HTMLCanvasElement>;
+
+
 
   generarQR(asignaturaId: string){
     const fechaAct = new Date();
