@@ -1,7 +1,8 @@
 <div class="pie">
 
   <p><a [routerLink]= "['/']">Home</a></p>
-  <p><a [routerLink]= "['/register']">Registrar</a></p>
+
+
 
 
   @if (usuario){
@@ -16,6 +17,7 @@
   }
   @else{
     <p><a [routerLink]= "['/login']">Login</a></p>
+    <p><a [routerLink]= "['/register']">Registrar</a></p>
   }
 
 

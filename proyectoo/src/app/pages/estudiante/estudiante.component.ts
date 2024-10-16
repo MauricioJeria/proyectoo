@@ -20,7 +20,7 @@ export class EstudianteComponent  {
 
 
   async takePicture(){
-    try {
+
     const image = await Camera.getPhoto({
       quality: 90,
       allowEditing: true,
@@ -28,16 +28,8 @@ export class EstudianteComponent  {
     });
     const imageUrl = image.webPath;
     this.imageSrc = imageUrl;
-
-   } catch (error) {
-    const err = error as {message: string}
-    if(err.message.includes('User cancelled photos app')){
-      console.log('La captura de imagen fue cancelada');
-    }else{
-      console.error('Error al tomar la imagen', err);
-
-    }
-    }
+  };
 }
 
-}
+
+

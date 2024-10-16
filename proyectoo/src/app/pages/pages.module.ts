@@ -14,7 +14,7 @@ import { SharedModule } from '../shared/shared.module';
 import { HeaderComponent } from '../shared/header/header.component';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsistenciaComponent } from './asistencia/asistencia.component';
 
 
@@ -37,7 +37,8 @@ import { AsistenciaComponent } from './asistencia/asistencia.component';
     PagesRoutingModule,
     SharedModule,
     IonicModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
 
   ]
 })
