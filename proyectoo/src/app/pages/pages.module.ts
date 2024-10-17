@@ -11,11 +11,10 @@ import { DocenteComponent} from './docente/docente.component';
 import { EstudianteComponent} from './estudiante/estudiante.component';
 import { RegisterComponent} from './register/register.component';
 import { SharedModule } from '../shared/shared.module';
-import { HeaderComponent } from '../shared/header/header.component';
-import { FooterComponent } from '../shared/footer/footer.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AsistenciaComponent } from './asistencia/asistencia.component';
+
 
 
 
